@@ -31,6 +31,7 @@ class App extends Component {
   handleActiveRoom(e) {
     const newActiveRoom = e.target.value;
     this.setState({ ActiveRoom: newActiveRoom });
+    console.log(this.state.ActiveRoom);
   }
 
   render() {
@@ -38,7 +39,7 @@ class App extends Component {
       <div className="App">
           <h1 className='title'>Bloc Chat</h1>
           <ul>
-            <RoomList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom() } />
+            <RoomList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom(e) } />
             <MessageList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom(e) } />
           </ul> 
        </div>

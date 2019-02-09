@@ -39,13 +39,9 @@ class RoomList extends Component {
 		this.setState({ newRoom: '' });
 	}
 
-	handleRoomClick(e, index) {
+	handleRoomClick(e) {
+				
 		
-		if (this.state.rooms[index] === index ) {
-			return <span style="font-weight: bold">{this.state.rooms.name}</span>		
-		}
-
-		else return this.state.rooms[index]
 	}
 
 
@@ -57,8 +53,8 @@ class RoomList extends Component {
 		 	this.state.rooms.map( (room, index) => {
 			
 				return (
-					<ul key={index} >
-                		<li onClick={ (e) => this.handleRoomClick(this.props.handleActiveRoom) }>{this.state.rooms[index].name}</li>
+					<ul key={index}>
+                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{this.state.rooms[index].name}</li>
 					</ul>
 				);
 			})
