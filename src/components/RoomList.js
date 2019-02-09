@@ -21,8 +21,7 @@ class RoomList extends Component {
 	this.roomsRef.on('child_added', snapshot => {
 		const room = snapshot.val();
 		room.key = snapshot.key;
-    	this.setState({ rooms: this.state.rooms.concat( room ) });
-   		
+    	this.setState({ rooms: this.state.rooms.concat( room ) });		
    		});
 	 	
 	}
@@ -40,9 +39,13 @@ class RoomList extends Component {
 		this.setState({ newRoom: '' });
 	}
 
-	handleRoomClick(e) {
+	handleRoomClick(e, index) {
 		
-		console.log('clicked!')
+		if (this.state.rooms[index] === index ) {
+			return <span style="font-weight: bold">{this.state.rooms.name}</span>		
+		}
+
+		else return this.state.rooms[index]
 	}
 
 
@@ -54,8 +57,8 @@ class RoomList extends Component {
 		 	this.state.rooms.map( (room, index) => {
 			
 				return (
-					<ul key={index}>
-                		<li onClick={ (e) => this.handleRoomClick(e) }>{this.state.rooms[index].name}</li>
+					<ul key={index} >
+                		<li onClick={ (e) => this.handleRoomClick(this.props.handleActiveRoom) }>{this.state.rooms[index].name}</li>
 					</ul>
 				);
 			})

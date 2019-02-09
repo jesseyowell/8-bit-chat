@@ -28,13 +28,18 @@ class App extends Component {
 
   }
 
+  handleActiveRoom(e) {
+    const newActiveRoom = e.target.value;
+    this.setState({ ActiveRoom: newActiveRoom });
+  }
+
   render() {
     return (
       <div className="App">
           <h1 className='title'>Bloc Chat</h1>
           <ul>
-            <RoomList firebase={firebase} ActiveRoom={this.state.ActiveRoom} />
-            <MessageList firebase={firebase} ActiveRoom={this.state.ActiveRoom} />
+            <RoomList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom() } />
+            <MessageList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom(e) } />
           </ul> 
        </div>
     );
