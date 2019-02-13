@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RoomList from '../components/RoomList';
 
 class MessageList extends Component {
 
@@ -7,33 +8,53 @@ class MessageList extends Component {
 	
 		this.state = {
     
-    		rooms: []
+    		messages: []
   
   		};
 
   		
-  		this.roomsRef = this.props.firebase.database().ref('rooms');
+  		this.messageRef = this.props.firebase.database().ref('messages');
+  	   
 	}
 
 	componentDidMount() {
 		
-		this.roomsRef.on('child_added', snapshot => {
-			
-			const room = snapshot.val();
-			room.key = snapshot.key;
-    		this.setState({ rooms: this.state.rooms.concat( room ) });
-   		
+		this.messageRef.on('child_added', snapshot => {
+			const message = snapshot.val();
+			message.key = snapshot.key;
+    		this.setState({ messages: this.state.messages.concat( message ) });
    		});
+
+	}
+
+	showMessageList() {
+
+
 	}
 
 
    	render() {
 	
+
 		return (
-			<div>
+			<div>  
+		 	{
+		 		
+		 		this.state.messages.map( (message, index) => {
+			
+				return (
+					<div key={index}>
+                		<p>{this.state.messages[index].username}</p>
+                		<p>{this.state.messages[index].content}</p>
+                		<p>{this.state.messages[index].sentAt}</p>
+					</div>
+			      );
+			   })
+		    }
 			</div>
 		);  
 	}
+
 }
 
 export default MessageList;

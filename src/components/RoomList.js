@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MessageList from '../components/MessageList';
 
 class RoomList extends Component {
 
@@ -8,7 +9,7 @@ class RoomList extends Component {
 		this.state = {
     
     		rooms: [],
-    		newRoom: ''
+    		newRoom: '',
   
   		};
 
@@ -39,22 +40,18 @@ class RoomList extends Component {
 		this.setState({ newRoom: '' });
 	}
 
-	handleRoomClick(e) {
-				
-		
-	}
-
 
    render() {
 	
 	return (
        <div>  
 		 {
+
 		 	this.state.rooms.map( (room, index) => {
 			
 				return (
 					<ul key={index}>
-                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{this.state.rooms[index].name}</li>
+                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{this.state.rooms[index].name}{this.state.rooms[index].key}</li>
 					</ul>
 				);
 			})
@@ -67,7 +64,9 @@ class RoomList extends Component {
 		   		</label>
 		  		<input type="submit" value="Submit" />
 			</form>
+
     	</div>
+    	
     )}
 }
 
