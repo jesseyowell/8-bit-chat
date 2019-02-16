@@ -22,7 +22,7 @@ class App extends Component {
 
     this.state = {
       
-      ActiveRoom: null
+      activeRoom: ''
 
     };
 
@@ -30,7 +30,7 @@ class App extends Component {
 
   handleActiveRoom(e) {
     const newActiveRoom = e.target.innerText;
-    this.setState({ ActiveRoom: newActiveRoom });
+    this.setState({ activeRoom: newActiveRoom });
   }
 
   render() {
@@ -38,11 +38,10 @@ class App extends Component {
       <div className="App">
           <h1 className='title'>Bloc Chat</h1>
           <ul>
-            <h3>{this.state.ActiveRoom}</h3>
+            <h3>{this.state.activeRoom}</h3>
             <RoomList firebase={firebase} handleActiveRoom={ (e) => this.handleActiveRoom(e) } />
             <MessageList firebase={firebase} 
-                         handleActiveRoom={ (e) => this.handleActiveRoom(e) } 
-                         ActiveRoom={this.state.ActiveRoom} />
+                         activeRoom={this.state.activeRoom} />
           </ul> 
        </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import RoomList from '../components/RoomList';
 
 class MessageList extends Component {
 
@@ -8,7 +7,8 @@ class MessageList extends Component {
 	
 		this.state = {
     
-    		messages: []
+    		messages: [],
+    		newMessages: []
   
   		};
 
@@ -27,8 +27,10 @@ class MessageList extends Component {
 
 	}
 
-	showMessageList() {
+	showMessages(message) {
 
+		const listMessage = message.filter(message => this.props.activeRoom.key !== this.state.messages.roomId);
+		this.setState({ messages: listMessage });
 
 	}
 
@@ -38,15 +40,15 @@ class MessageList extends Component {
 
 		return (
 			<div>  
-		 	{
-		 		
+		 	{	
 		 		this.state.messages.map( (message, index) => {
 			
 				return (
-					<div key={index}>
-                		<p>{this.state.messages[index].username}</p>
-                		<p>{this.state.messages[index].content}</p>
-                		<p>{this.state.messages[index].sentAt}</p>
+					<div key={index} onClick={ (message) => this.showMessages(message) }>
+                		<p>{message.username}</p>
+                		<p>{message.content}</p>
+                		<p>{message.sentAt}</p>
+                		<p>{this.props.activeRoom.key}</p>
 					</div>
 			      );
 			   })

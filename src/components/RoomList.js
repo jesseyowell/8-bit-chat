@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MessageList from '../components/MessageList';
 
 class RoomList extends Component {
 
@@ -51,7 +50,7 @@ class RoomList extends Component {
 			
 				return (
 					<ul key={index}>
-                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{this.state.rooms[index].name}{this.state.rooms[index].key}</li>
+                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{room.name}</li>
 					</ul>
 				);
 			})
