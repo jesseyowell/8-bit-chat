@@ -30,6 +30,7 @@ class App extends Component {
 
   handleActiveRoom(e) {
     const newActiveRoom = e.target.innerText;
+    console.log(newActiveRoom);
     this.setState({ activeRoom: newActiveRoom });
   }
 

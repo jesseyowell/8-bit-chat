@@ -29,22 +29,25 @@ class MessageList extends Component {
 
 	showMessages(message) {
 
-		const listMessage = message.filter(message => this.props.activeRoom === this.state.messages.key);
-		this.setState({ messages: listMessage });
+		// const listMessage = message.filter(message => this.props.activeRoom === this.state.messages.key);
+		// console.log(listMessage);
+		// this.setState({ messages: listMessage });
 			
 	}
 
 
    	render() {
 	
-
+		const activeRoomMessage = this.state.messages.filter(message => message.roomId === this.props.activeRoom);
+        console.log(activeRoomMessage);
+        console.log(this.state.messages.roomId);
 		return (
 			<div>  
 		 	{	
-		 		this.state.messages.map( (message, index) => {
+		 		activeRoomMessage.map( (message) => {
 			
 				return (
-					<div key={message.key} onClick={ (message) => this.showMessages(message) }>
+					<div key={message.key}>
                 		<p>{message.username}</p>
                 		<p>{message.content}</p>
                 		<p>{message.sentAt}</p>
