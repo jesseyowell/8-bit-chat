@@ -8,7 +8,6 @@ class MessageList extends Component {
 		this.state = {
     
     		messages: [],
-    		newMessages: []
   
   		};
 
@@ -27,20 +26,12 @@ class MessageList extends Component {
 
 	}
 
-	showMessages(message) {
-
-		// const listMessage = message.filter(message => this.props.activeRoom === this.state.messages.key);
-		// console.log(listMessage);
-		// this.setState({ messages: listMessage });
-			
-	}
-
 
    	render() {
 	
-		const activeRoomMessage = this.state.messages.filter(message => message.roomId === this.props.activeRoom);
+		const activeRoomMessage = this.state.messages.filter(message => message.key === this.props.activeRoom.key);
         console.log(activeRoomMessage);
-        console.log(this.state.messages.roomId);
+        console.log(this.props.activeRoom.key);
 		return (
 			<div>  
 		 	{	
@@ -51,6 +42,7 @@ class MessageList extends Component {
                 		<p>{message.username}</p>
                 		<p>{message.content}</p>
                 		<p>{message.sentAt}</p>
+                		<p>{message.roomId}</p>
                 		<p>{this.props.activeRoom}</p>
 					</div>
 			      );
