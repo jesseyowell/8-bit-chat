@@ -49,14 +49,11 @@ class RoomList extends Component {
 		 	this.state.rooms.map( (room, index) => {
 			
 				return (
-					<ul key={index}>
-                		<li onClick={ (e) => this.props.handleActiveRoom(e) }>{room.name}</li>
-					</ul>
+                		<p key={room.key} onClick={ (e) => this.props.handleActiveRoom(e) }>{room.name}</p>
 				);
 			})
 		 }
 			<form onSubmit={ (e) => this.createRoom(e) }>
-				
 				<label>
 		    		Room name:
 		  			<input type="text" value={this.state.newRoom} onChange={ (e) => this.handleChange(e) } /> 
