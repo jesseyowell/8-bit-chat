@@ -29,7 +29,7 @@ class MessageList extends Component {
 
    	render() {
 	
-		const activeRoomMessage = this.state.messages.filter(message => message.key === this.props.activeRoom.key);
+		const activeRoomMessage = this.state.messages.filter(message => message.roomId === this.props.activeRoom.key);
         console.log(activeRoomMessage);
         console.log(this.props.activeRoom.key);
 		return (

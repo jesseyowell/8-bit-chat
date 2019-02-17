@@ -46,10 +46,10 @@ class RoomList extends Component {
        <div>  
 		 {
 
-		 	this.state.rooms.map( (room) => {
+		 	this.state.rooms.map( (room, index) => {
 			
 				return (
-                		<p key={room.key} onClick={ (room) => this.props.handleActiveRoom(room) }>{room.name}</p>
+                		<p key={room.key} onClick={ () => this.props.handleActiveRoom(room) }>{room.name}</p>
 				);
 			})
 		 }
