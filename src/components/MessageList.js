@@ -30,8 +30,8 @@ class MessageList extends Component {
    	render() {
 	
 		const activeRoomMessage = this.state.messages.filter(message => message.roomId === this.props.activeRoom.key);
-        console.log(activeRoomMessage);
-        console.log(this.props.activeRoom.key);
+        	console.log(activeRoomMessage); // testing the filter
+        	console.log(this.props.activeRoom); 
 		return (
 			<div>  
 		 	{	
@@ -42,8 +42,6 @@ class MessageList extends Component {
                 		<p>{message.username}</p>
                 		<p>{message.content}</p>
                 		<p>{message.sentAt}</p>
-                		<p>{message.roomId}</p>
-                		<p>{this.props.activeRoom}</p>
 					</div>
 			      );
 			   })
