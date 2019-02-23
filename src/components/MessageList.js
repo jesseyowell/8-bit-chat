@@ -8,6 +8,7 @@ class MessageList extends Component {
 		this.state = {
     
     		messages: [],
+    		newMessage: ''
   
   		};
 
@@ -26,6 +27,21 @@ class MessageList extends Component {
 
 	}
 
+	handleMessage(e) {
+		this.setState({ newMessage: e.target.value });
+	}
+
+	createMessage(e) {
+		e.preventDefault();
+		let newMessage = this.state.newMessage;
+		this.messageRef.push({
+			username: this.props.currentUser.displayName || 'Guest',
+			content: newMessage,
+			sentAt: this.props.firebase.database.ServerValue.TIMESTAMP,
+			roomId: this.props.activeRoom.key
+		});
+		this.setState({ newMessage: '' });
+	}
 
    	render() {
 	
@@ -33,16 +49,27 @@ class MessageList extends Component {
         	console.log(activeRoomMessage); // testing the filter
         	console.log(this.props.activeRoom); 
 		return (
-			<div>  
+			<div>
+			<form onSubmit={ (e) => this.createMessage(e) }>
+				<label>
+		    		Message:
+		  			<input type="text" value={this.state.newMessage} onChange={ (e) => this.handleMessage(e) } /> 
+		   		</label>
+		  			<input type="submit" value="Submit" />
+		  	</form>
 		 	{	
+
 		 		activeRoomMessage.map( (message) => {
-			
+			    
+			    let formattedTime = new Date(message.sentAt).toLocaleTimeString("en-US");
+				
 				return (
 					<div key={message.key}>
                 		<p>{message.username}</p>
                 		<p>{message.content}</p>
-                		<p>{message.sentAt}</p>
+                		<p>{formattedTime}</p>
 					</div>
+					
 			      );
 			   })
 		    }
