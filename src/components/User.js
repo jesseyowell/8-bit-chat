@@ -35,17 +35,17 @@ class User extends Component {
 		let displayName;
 
 		if (this.state.isLoggedIn === false) {
-			button = <button onClick={ (user) => this.userSignIn(user) }>Sign In</button>;
+			button = <button className="nes-btn is-primary" onClick={ (user) => this.userSignIn(user) }>Sign In</button>;
 			displayName = 'Guest';
 		}	
 				
 		else {
-			button = <button onClick={ (user) => this.userSignOut(user) }>Sign out</button>;
+			button = <button className="nes-btn is-success" onClick={ (user) => this.userSignOut(user) }>Sign out</button>;
 			displayName = this.props.currentUser.displayName;
 		}
 			
 		return (
-			<div>
+			<div className="signin-box">
 				{button}
 				{displayName}
 			</div>		

@@ -35,13 +35,13 @@ class App extends Component {
   }
 
   setUser(user) {
-    this.setState({ currentUser: user || "Guest" });
+    this.setState({ currentUser: user || 'Guest' });
   }
 
   render() {
     return (
-      <div className="App">
-          <h1 className='title'>Bloc Chat</h1>
+      <div className='App'>
+          <h1 className='title'>8-BIT CHAT</h1>
           <ul>
             <h3>{this.state.activeRoom.name}</h3>
             <RoomList firebase={firebase} handleActiveRoom={ (room) => this.handleActiveRoom(room) } />

@@ -33,9 +33,9 @@ class RoomList extends Component {
 	createRoom(e) {
 		e.preventDefault();
 		let addRooms = this.state.newRoom;
-		this.roomsRef.push({   
-  			name: addRooms
-		});
+	    this.roomsRef.push({   
+  		    name: addRooms
+		}); 
 		this.setState({ newRoom: '' });
 	}
 
@@ -43,26 +43,33 @@ class RoomList extends Component {
 
 
    render() {
-	
-	return (
-       <div>  
-		 {
+     
+     // this is used to disable the buttons when there is an empty value for the room name
+     const { rooms, newRoom } = this.state;
+     const isEnabled = rooms.length > 0 && newRoom.length > 0;
 
+	return (
+       <div className="room-container">  
+		 {
 		 	this.state.rooms.map( (room, index) => {
-			
 				return (
-                		<p key={index} onClick={ () => this.props.handleActiveRoom(room) }>{room.name}</p>
+                	   <div className="left-sidebar nes-container is-dark is-rounded">	
+                		 <p key={index} onClick={ () => this.props.handleActiveRoom(room) }>{room.name}</p>
+                	   </div>
 				);
 			})
 		 }
 			<form onSubmit={ (e) => this.createRoom(e) }>
 				<label>
 		    		Room name:
-		  			<input type="text" value={this.state.newRoom} onChange={ (e) => this.handleChange(e) } /> 
+		  			<input 
+		  			  type="text"
+		  			  placeholder="Enter room name" 
+		  			  value={this.state.newRoom} 
+		  			  onChange={ (e) => this.handleChange(e) } /> 
 		   		</label>
-		  		<input type="submit" value="Submit" />
+		  		<button disabled={!isEnabled}>Submit</button>
 			</form>
-
     	</div>
     	
     )}
