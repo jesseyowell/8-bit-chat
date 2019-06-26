@@ -1,5 +1,6 @@
 {
-  "name": "bloc-chat-react",
+  "name": "8-bit-chat",
+  "homepage": "http://jesseyowell.github.io/8-bit-chat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
