@@ -57,3 +57,12 @@ code {
    flex-flow: column;
 }
 
+.room-container:hover {
+
+}
+
+.room-text-box {
+  margin-left: 20px;
+}
+
+
