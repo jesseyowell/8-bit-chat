@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c4c1440c76c2a92a0646",
-    "url": "/8-bit-chat/static/css/main.747a2d53.chunk.css"
+    "revision": "23bd6f24392dd5f721ba",
+    "url": "/8-bit-chat/static/css/main.25417dd3.chunk.css"
   },
   {
-    "revision": "c4c1440c76c2a92a0646",
-    "url": "/8-bit-chat/static/js/main.c4c1440c.chunk.js"
+    "revision": "23bd6f24392dd5f721ba",
+    "url": "/8-bit-chat/static/js/main.23bd6f24.chunk.js"
   },
   {
     "revision": "586522c033284b903880",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/8-bit-chat/static/js/runtime~main.899271ed.js"
   },
   {
-    "revision": "bf686b915dbed24207e43680d2b846bc",
+    "revision": "1fd50e535468cbecae0399068f9e5f8b",
     "url": "/8-bit-chat/index.html"
   }
 ];

@@ -1,13 +1,13 @@
 {
-  "main.css": "/8-bit-chat/static/css/main.747a2d53.chunk.css",
-  "main.js": "/8-bit-chat/static/js/main.c4c1440c.chunk.js",
-  "main.js.map": "/8-bit-chat/static/js/main.c4c1440c.chunk.js.map",
+  "main.css": "/8-bit-chat/static/css/main.25417dd3.chunk.css",
+  "main.js": "/8-bit-chat/static/js/main.23bd6f24.chunk.js",
+  "main.js.map": "/8-bit-chat/static/js/main.23bd6f24.chunk.js.map",
   "static/js/1.586522c0.chunk.js": "/8-bit-chat/static/js/1.586522c0.chunk.js",
   "static/js/1.586522c0.chunk.js.map": "/8-bit-chat/static/js/1.586522c0.chunk.js.map",
   "runtime~main.js": "/8-bit-chat/static/js/runtime~main.899271ed.js",
   "runtime~main.js.map": "/8-bit-chat/static/js/runtime~main.899271ed.js.map",
-  "static/css/main.747a2d53.chunk.css.map": "/8-bit-chat/static/css/main.747a2d53.chunk.css.map",
+  "static/css/main.25417dd3.chunk.css.map": "/8-bit-chat/static/css/main.25417dd3.chunk.css.map",
   "index.html": "/8-bit-chat/index.html",
-  "precache-manifest.bd24d200ed573ef16c322c98bf0a6e64.js": "/8-bit-chat/precache-manifest.bd24d200ed573ef16c322c98bf0a6e64.js",
+  "precache-manifest.ed4743a0142c5f7d059759571b7a8aa9.js": "/8-bit-chat/precache-manifest.ed4743a0142c5f7d059759571b7a8aa9.js",
   "service-worker.js": "/8-bit-chat/service-worker.js"
 }
