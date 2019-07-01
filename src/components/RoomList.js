@@ -65,11 +65,12 @@ class RoomList extends Component {
             <input 
               type="text"
               size="12"
-              placeholder="Enter room name" 
               value={this.state.newRoom} 
               onChange={ (e) => this.handleChange(e) } /> 
           </label>
-          <button disabled={!isEnabled}>Submit</button>
+          <button disabled={!isEnabled}>
+            Submit
+          </button>
       </form>
       </div>
       

@@ -44,6 +44,7 @@ class MessageList extends Component {
 
    	render() {
 	
+		// We don't want to allow people to enter in messages without a room selected. Otherwise, it breaks!
 		const { messages, newMessage } = this.state;
 		const isEnabled = messages.length > 0 && newMessage.length > 0 && this.props.activeRoom.key != null;
 
