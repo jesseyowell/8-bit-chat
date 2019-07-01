@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Styled with [NES.css](https://nostalgic-css.github.io/NES.css/)
+
 ## Welcome to the 8-bit chat application!
 
 This project was meant to be a concept chat application for an 8-bit system. It's built on React and Firebase. 
