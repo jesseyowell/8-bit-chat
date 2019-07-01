@@ -70,7 +70,6 @@ class MessageList extends Component {
 				<label>
 		    		Message:
 		  			<input type="text"
-		  			       placeholder="Enter message here" 
 		  			       value={this.state.newMessage} 
 		  			       onChange={ (e) => this.handleMessage(e) } /> 
 		   		</label>
