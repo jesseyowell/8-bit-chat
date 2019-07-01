@@ -1,13 +1,13 @@
 {
   "main.css": "/8-bit-chat/static/css/main.25417dd3.chunk.css",
-  "main.js": "/8-bit-chat/static/js/main.23bd6f24.chunk.js",
-  "main.js.map": "/8-bit-chat/static/js/main.23bd6f24.chunk.js.map",
+  "main.js": "/8-bit-chat/static/js/main.508c8835.chunk.js",
+  "main.js.map": "/8-bit-chat/static/js/main.508c8835.chunk.js.map",
   "static/js/1.586522c0.chunk.js": "/8-bit-chat/static/js/1.586522c0.chunk.js",
   "static/js/1.586522c0.chunk.js.map": "/8-bit-chat/static/js/1.586522c0.chunk.js.map",
   "runtime~main.js": "/8-bit-chat/static/js/runtime~main.899271ed.js",
   "runtime~main.js.map": "/8-bit-chat/static/js/runtime~main.899271ed.js.map",
   "static/css/main.25417dd3.chunk.css.map": "/8-bit-chat/static/css/main.25417dd3.chunk.css.map",
   "index.html": "/8-bit-chat/index.html",
-  "precache-manifest.ed4743a0142c5f7d059759571b7a8aa9.js": "/8-bit-chat/precache-manifest.ed4743a0142c5f7d059759571b7a8aa9.js",
+  "precache-manifest.555fa6b3d9debbc5221969a378dfebaf.js": "/8-bit-chat/precache-manifest.555fa6b3d9debbc5221969a378dfebaf.js",
   "service-worker.js": "/8-bit-chat/service-worker.js"
 }
