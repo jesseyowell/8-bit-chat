@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/8-bit-chat/static/js/runtime~main.899271ed.js"
   },
   {
-    "revision": "4a5a23d472e2b4a043ee8154cc2a8547",
+    "revision": "ddb071b0baa77990711e306ec38eca9a",
     "url": "/8-bit-chat/index.html"
   }
 ];
