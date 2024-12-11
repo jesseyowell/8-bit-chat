@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "firebase": "^5.8.1",
+    "firebase": "^10.9.0",
     "nes.css": "^2.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
